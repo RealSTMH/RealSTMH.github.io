@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RealSTMH • Portfolio</title>
+  <meta name="description" content="Portfolio of RealSTMH — student in Switzerland and cybersecurity enthusiast." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #0f141a;
+      --muted: #9fb0c0;
+      --text: #e9f0f6;
+      --accent: #ff5252;
+      --accent-2: #4cc9f0;
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 8px 24px rgba(0,0,0,0.35);
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f8fafc;--card:#ffffff;--muted:#4b5563;--text:#0b1220;--accent:#e11d48;--accent-2:#0369a1;--border:rgba(2,6,23,.08);--shadow:0 8px 24px rgba(2,6,23,.06);
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 100% -10%, rgba(255,82,82,.15), transparent 50%),
+                  radial-gradient(1000px 500px at -10% 110%, rgba(76,201,240,.15), transparent 50%),
+                  var(--bg);
+      line-height: 1.6;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    
+    .container { width: min(1100px, 92%); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; backdrop-filter: saturate(1.2) blur(6px);
+      background: color-mix(in oklab, var(--bg), transparent 70%);
+      border-bottom: 1px solid var(--border);
+      z-index: 50;
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; }
+    .brand { font-weight: 700; letter-spacing: .2px; }
+    .nav a { margin-left: 16px; font-weight: 600; }
+
+    
+    .hero { padding: 72px 0 48px; display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: center; }
+    .hero h1 { font-size: clamp(28px, 5vw, 48px); line-height: 1.1; margin: 0 0 12px; }
+    .tagline { font-size: 18px; color: var(--muted); margin-bottom: 24px; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--border);
+      background: linear-gradient(180deg, color-mix(in oklab, var(--card), white 2%), var(--card));
+      color: var(--text); padding: 10px 16px; border-radius: 12px; font-weight: 600; box-shadow: var(--shadow);
+      transition: transform .08s ease, box-shadow .2s ease; text-decoration: none;
+    }
+    .btn:hover { transform: translateY(-1px); text-decoration: none; }
+    .btn.primary { background: linear-gradient(180deg, color-mix(in oklab, var(--accent), black 10%), var(--accent)); border-color: transparent; }
+    .hero-card {
+      border: 1px solid var(--border); background: color-mix(in oklab, var(--card), transparent 0%);
+      padding: 18px; border-radius: 16px; box-shadow: var(--shadow);
+    }
+    .hero-list { margin: 0; padding-left: 18px; }
+
+    
+    section { padding: 48px 0; }
+    h2 { font-size: clamp(22px, 3.5vw, 28px); margin: 0 0 16px; }
+    .muted { color: var(--muted); }
+
+    
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+    .card { grid-column: span 6; border: 1px solid var(--border); background: var(--card); padding: 18px; border-radius: 16px; box-shadow: var(--shadow); }
+    .card h3 { margin-top: 0; }
+    @media (max-width: 860px){
+      .hero { grid-template-columns: 1fr; }
+      .card { grid-column: span 12; }
+    }
+
+    
+    .tech { display: flex; gap: 12px; flex-wrap: wrap; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 12px; border: 1px solid var(--border); background: var(--card); box-shadow: var(--shadow); font-weight: 600; }
+    .badge img { height: 20px; width: 20px; }
+
+    footer { padding: 36px 0 60px; color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand"> <strong>RealSTMH</strong></div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#stack">Tech</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    
+    <section class="hero" id="home">
+      <div>
+        <h1>Hey, I'm <span style="color:var(--accent)">RealSTMH</span> 👋</h1>
+        <p class="tagline">Student in Switzerland · Cybersecurity Enthusiast</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn" href="https://github.com/RealSTMH" target="_blank" rel="noreferrer">GitHub Profile</a>
+          <a class="btn" href="#portfolio">Portfolio Link</a>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <h3 style="margin:8px 0 6px">What I'm up to</h3>
+        <ul class="hero-list">
+          <li>Studying in Switzerland</li>
+          <li>Learning <strong>Python, JavaScript, HTML &amp; CSS</strong></li>
+          <li>Exploring web security and CTFs</li>
+        </ul>
+      </aside>
+    </section>
+
+    
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm a student based in Switzerland with a growing focus on software and security. I love building small, useful projects
+        while leveling up my fundamentals in programming and web technologies. I'm especially interested in cybersecurity, from
+        secure coding to hands‑on practice with CTF challenges.
+      </p>
+    </section>
+
+    
+    <section id="stack">
+      <h2>🛠️ Tech Stack</h2>
+      <p class="muted">Currently learning and using:</p>
+      <div class="tech">
+        <span class="badge"><img alt="Python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>Python</span>
+        <span class="badge"><img alt="JavaScript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>JavaScript</span>
+        <span class="badge"><img alt="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>HTML5</span>
+        <span class="badge"><img alt="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/>CSS3</span>
+      </div>
+    </section>
+
+    
+    <section id="projects">
+      <h2>📦 Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Project One</h3>
+          <p class="muted">Short description of what it does, why you built it, and the main tech used.</p>
+          <p>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Source Code</a>
+          </p>
+        </article>
+        <article class="card">
+          <h3>Project Two</h3>
+          <p class="muted">Another project highlight—keep it concise and outcome‑focused.</p>
+          <p>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Live Demo</a>
+            <a class="btn" href="#" target="_blank" rel="noreferrer">Source Code</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    
+    <section id="portfolio">
+      <h2>🔗 Portfolio</h2>
+      <p>If you’d like to learn more about me, check out my portfolio: 
+        <a href="https://your-portfolio-url.com" target="_blank" rel="noreferrer"><strong>your-portfolio-url.com</strong></a>
+      </p>
+    </section>
+
+    
+    <section id="contact">
+      <h2>📫 Contact</h2>
+      <p>Best way to reach me is by email. I'm open to feedback, collaboration, and cool learning opportunities.</p>
+      <p>
+        <a class="btn primary" href="mailto:youremail@example.com">Email Me</a>
+        <a class="btn" href="https://github.com/RealSTMH" target="_blank" rel="noreferrer">GitHub</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> RealSTMH. Built with ♥ and vanilla HTML/CSS.</small>
+    </div>
+  </footer>
+
+  <script>
+
